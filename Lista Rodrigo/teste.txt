@@ -1,0 +1,27 @@
+public CListaDup concatenaLD(CListaDup L1, CListaDup L2) {
+    CListaDup AmaisB = new CListaDup();
+    
+    for (CCelula i = L1.primeiro.prox; i != null; i = i.prox) {
+        AmaisB.inserirFim(i.elemento);
+    }
+
+    for (CCelula i = L2.primeiro.prox; i != null; i = i.prox) {
+        AmaisB.inserirFim(i.elemento);
+    }
+
+    return AmaisB;
+}
+
+public CFila concatenaLD(CFila L1, CFila L2) {
+    CFila AmaisB = new CFila();
+    
+    for (CCelula i = L1.primeiro.prox; i != null; i = i.prox) {
+        AmaisB.inserir(i.elemento);
+    }
+
+    for (CCelula i = L2.primeiro.prox; i != null; i = i.prox) {
+        AmaisB.inserir(i.elemento);
+    }
+
+    return AmaisB;
+}

@@ -1,0 +1,20 @@
+1   ocupado 1 80
+2desocupado 1 80
+3desocupado 1 80
+4desocupado 1 80
+5desocupado 1 80
+6desocupado 1 80
+7desocupado 1 80
+8desocupado 1 80
+9desocupado 1 80
+10desocupado 1 80
+11desocupado 2 120
+12desocupado 2 120
+13desocupado 2 120
+14desocupado 2 120
+15desocupado 2 120
+16desocupado 2 120
+17desocupado 2 120
+18desocupado 2 120
+19desocupado 2 120
+20desocupado 2 120

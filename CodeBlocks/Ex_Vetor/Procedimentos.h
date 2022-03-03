@@ -1,0 +1,4 @@
+#ifndef PROCEDIMENTOS_H_INCLUDED
+#define PROCEDIMENTOS_H_INCLUDED
+int fatorial(int);
+#endif // PROCEDIMENTOS_H_INCLUDED

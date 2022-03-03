@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1621255142 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\ex_fixação_modula\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<locale.h>
+	<string.h>
+

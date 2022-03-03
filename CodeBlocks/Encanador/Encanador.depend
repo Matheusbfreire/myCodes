@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1616415013 source:c:\users\matheus brandão\documents\projetos codeblocks\encanador\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1616416094 source:c:\users\matheus brandão\documents\códigos\codeblocks\encanador\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

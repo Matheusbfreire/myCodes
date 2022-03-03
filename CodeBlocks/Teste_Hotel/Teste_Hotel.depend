@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1625530222 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\teste_hotel\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<math.h>
+	<time.h>
+

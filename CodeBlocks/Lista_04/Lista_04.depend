@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1619620923 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\aula24_exercicios\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<time.h>
+	<string.h>
+

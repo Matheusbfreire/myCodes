@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1622639791 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\ex_vetor\procedimentos.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+
+1622643079 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\ex_vetor\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<string.h>
+	"Procedimentos.h"
+
+1622639791 c:\users\matheus brandão\documents\códigos\projetos codeblocks\ex_vetor\procedimentos.h
+

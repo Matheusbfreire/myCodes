@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1623066699 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\revisão_variavel_global\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<string.h>
+

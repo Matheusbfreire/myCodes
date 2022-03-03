@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1622041149 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\exercicio_biblioteca\mb_matheus.c
+
+1622032256 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\exercicio_biblioteca\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	"MB_Matheus.h"
+
+1622031063 c:\users\matheus brandão\documents\códigos\projetos codeblocks\exercicio_biblioteca\mb_matheus.h
+

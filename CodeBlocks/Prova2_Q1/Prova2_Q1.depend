@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1623848823 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\prova2_q1\matheus.c
+
+1623848527 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\prova2_q1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	"Matheus.h"
+
+1623848400 c:\users\matheus brandão\documents\códigos\projetos codeblocks\prova2_q1\matheus.h
+

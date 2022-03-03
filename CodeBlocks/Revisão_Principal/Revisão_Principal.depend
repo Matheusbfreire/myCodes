@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1623064531 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\revisão_principal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<string.h>
+

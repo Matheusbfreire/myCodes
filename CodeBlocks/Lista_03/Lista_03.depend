@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1618841640 source:c:\users\matheus brandão\documents\códigos\códigos por fora\lista_03\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<time.h>
+
+1618865601 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\lista_03\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<time.h>
+

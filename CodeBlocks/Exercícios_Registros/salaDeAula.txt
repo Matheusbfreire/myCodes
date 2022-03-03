@@ -1,0 +1,2 @@
+Nome: s  Matrícula: 4454354  Nota 1: 23,00  Nota 2: 234,00  Nota 3: 2311,00  
+Nome: a  Matrícula: 123  Nota 1: 1,00  Nota 2: 2,00  Nota 3: 3,00  

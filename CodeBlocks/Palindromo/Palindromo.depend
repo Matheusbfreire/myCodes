@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1632253876 source:c:\users\matheus brandão\documents\códigos\codeblocks\palindromo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<stdbool.h>
+

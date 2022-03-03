@@ -1,0 +1,145 @@
+Resumo dos comandos.
+Rotina local básica
+
+ 
+
+-- Baixar o repositório do GitHub
+
+git clone https://github.com/....
+
+ 
+
+-- Verfiicar alterações pendentes
+
+git status
+
+ 
+
+-- Visualizar diferenças de arqs
+
+git diff arquivo.ext
+
+ 
+
+-- Incluir arquivos na nova versão
+
+git add .   OU
+
+git add arquivo.ext
+
+ 
+
+-- incluir parte das alterações
+
+git add --patch arquivo.ext
+
+ 
+
+-- Fechar pacote de uma versão
+
+git commit -m "Mensagem"
+
+ 
+
+-- Verficar lista de versões
+
+git log
+
+
+
+-- Mostra a diferença entre o working dir e a stage
+
+git diff --staged
+
+
+
+-- mostra a qual ponto está associado o HEAD
+
+git show-ref --head
+
+
+
+-- Marcar 
+
+
+Rotina Remota básica
+
+-- adicionar link para repo remoto
+
+git remote add https://github.com/....
+
+
+
+-- Enviar versão p/ repo remoto
+
+git push origin master
+
+ 
+
+-- listar todos links de repositórios remotos
+
+git remote -v 
+
+ 
+
+-- criar um diretorio git local a partir de um repo remoto
+
+git clone https://github.com/...
+
+
+
+-- Trazer novas informações do servidor sem alterar minha cópia local
+
+git fetch
+
+
+
+-- Trazer novas informações do servidor incorporando à minha cópia local
+
+git pull origin master
+
+
+Branches e Merge
+
+-- Listar os branches existentes
+
+git branch
+
+
+
+-- Criar novo ramo do código
+
+git branch nome_branch
+
+ 
+
+-- Alterar a linha de desenv.
+
+git checkout nome_branch
+
+git checkout master
+
+ 
+
+-- Criar ramo e alterar linha
+
+git checkout -b nome_branch
+
+ 
+
+
+
+
+-- Unificar branch em um fluxo
+
+----> Ir para o fluxo master antes   git checkout master
+
+git merge nome_branch
+
+git merge --no-ff nome_branch
+
+ 
+
+-- Excluir uma branch
+
+git branch -d nome_branch

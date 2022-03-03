@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1616595559 source:c:\users\matheus brandão\documents\projetos codeblocks\diferença entre números\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

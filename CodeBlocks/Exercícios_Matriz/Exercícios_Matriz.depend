@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1623359156 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\exercícios_matriz\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+	<string.h>
+	<time.h>
+

@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1625175244 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\hotel_descanso_garantido\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"Matheus.h"
+
+1625261328 c:\users\matheus brandão\documents\códigos\projetos codeblocks\hotel_descanso_garantido\matheus.h
+
+1625260080 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\hotel_descanso_garantido\matheus.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<string.h>
+	<math.h>
+	<time.h>
+

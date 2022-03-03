@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1621856812 source:c:\users\matheus brandão\documents\códigos\projetos codeblocks\media_modularização\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+
