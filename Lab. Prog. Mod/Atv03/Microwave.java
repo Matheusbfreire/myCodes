@@ -55,7 +55,8 @@ public class Microwave {
 		this.doorOpen = doorOpen;
 	}
 	/* Método para setar o timer do microondas de acordo com os minutos
-	 * e segundos passados por parâmetro. */
+	 * e segundos passados por parâmetro.
+	 */
 	public void setTimer(int minutes, int seconds) {
 		setMinutes(minutes);
 		setSeconds(seconds);
@@ -111,15 +112,17 @@ public class Microwave {
 	 * Método para passar 1 segundo.
 	 */
 	public void passASecond() throws Exception {
-		if (this.seconds >= 1) {
-			setSeconds(this.seconds - 1);
-			printTimePass();
-		} else if (this.minutes >= 1) {
-			setMinutes(this.minutes - 1);
-			setSeconds(59);
-			printTimePass();
-		} else {
-			throw new Exception("ERRO: Timer zerado, impossível passar tempo.");
+		if (!this.paused) {
+			if (this.seconds >= 1) {
+				setSeconds(this.seconds - 1);
+				printTimePass();
+			} else if (this.minutes >= 1) {
+				setMinutes(this.minutes - 1);
+				setSeconds(59);
+				printTimePass();
+			} else {
+				throw new Exception("ERRO: Timer zerado, impossível passar tempo.");
+			}
 		}
 	}
 	/** 

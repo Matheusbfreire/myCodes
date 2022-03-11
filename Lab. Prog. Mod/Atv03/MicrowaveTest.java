@@ -12,7 +12,9 @@ class MicrowaveTest {
 	public void init() {
 		microwave = new Microwave();
 	}
-
+	/*
+	 * Testa se o método timer está setando as variáveis minutes e seconds.
+	 */
 	@Test
 	public void timerTest() {
 		microwave.setTimer(1, 10);
@@ -20,14 +22,18 @@ class MicrowaveTest {
 		assertEquals(1, microwave.minutes);
 		assertEquals(10, microwave.seconds);
 	}
-	
+	/*
+	 * Testa se o método pauseTimer está pausando o timer do microondas.
+	 */
 	@Test
 	public void pausingTimerTest() {
 		microwave.pauseTimer();
 		
 		assertTrue(microwave.paused);
 	}
-	
+	/*
+	 * Testa se o método reesetTimer está resetando as variáveis minutes e seconds.
+	 */
 	@Test
 	public void reesetingTimerTest() {
 		microwave.reesetTimer();
@@ -35,14 +41,18 @@ class MicrowaveTest {
 		assertEquals(0, microwave.minutes);
 		assertEquals(0, microwave.seconds);
 	}
-	
+	/*
+	 * Testa se o método turnOff está desligando o microondas.
+	 */
 	@Test
 	public void turningTheMicrowaveOffTest() {
 		microwave.turnOff();
 		
 		assertFalse(microwave.on);
 	}
-	
+	/*
+	 * Testa se o método turnOn está ligando o microondas somente se a porta estiver fechada.
+	 */
 	@Test
 	public void turningTheMicrowaveOnIfTheDoorIsClosedTest() throws Exception {
 		microwave.closeTheDoor();
@@ -60,7 +70,9 @@ class MicrowaveTest {
 			System.out.println(e);
 		}
 	}
-	
+	/*
+	 * Testa se o método openTheDoor está abrindo a porta somente se o microondas estiver fechado.
+	 */
 	@Test
 	public void openingTheDoorIfTheMicrowaveIsOff() throws Exception {
 		microwave.openTheDoor();
@@ -76,7 +88,10 @@ class MicrowaveTest {
 			System.out.println(e);
 		}
 	}
-	
+	/*
+	 * Testa se o método passASecond está atualizando o tempo do microondas e sinalizando
+	 * essa passagem de tempo.
+	 */
 	@Test
 	public void updatingTimerTest() throws Exception {
 			microwave.setTimer(1, 10);
