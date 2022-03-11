@@ -1,66 +1,102 @@
 package microwavesrc;
 
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class MicrowaveTest {
+	
+	Microwave microwave;
+	
+	@BeforeEach
+	public void init() {
+		microwave = new Microwave();
+	}
 
 	@Test
-	void timerTest() {
-		Microwave m = new Microwave();
+	public void timerTest() {
+		microwave.setTimer(1, 10);
 		
-		m.timer(10, 10);
-		
-		assertEquals(10, m.minutes);
-		assertEquals(10, m.seconds);
+		assertEquals(1, microwave.minutes);
+		assertEquals(10, microwave.seconds);
 	}
 	
 	@Test
-	void pausingTimerTest() {
-		Microwave m = new Microwave();
+	public void pausingTimerTest() {
+		microwave.pauseTimer();
 		
-		m.pause();
-		
-		assertTrue(m.paused);
+		assertTrue(microwave.paused);
 	}
 	
 	@Test
-	void reesetingTimerTest() {
-		Microwave m = new Microwave();
+	public void reesetingTimerTest() {
+		microwave.reesetTimer();
 		
-		m.reeset();
-		
-		assertEquals(0, m.minutes);
-		assertEquals(0, m.seconds);
+		assertEquals(0, microwave.minutes);
+		assertEquals(0, microwave.seconds);
 	}
 	
 	@Test
-	void turningTheMicrowaveOffTest() {
-		Microwave m = new Microwave();
+	public void turningTheMicrowaveOffTest() {
+		microwave.turnOff();
 		
-		m.turnOff();
-		
-		assertFalse(m.on);
+		assertFalse(microwave.on);
 	}
 	
 	@Test
-	void turningTheMicrowaveOnIfTheDoorIsClosedTest() {
-		Microwave m = new Microwave();
+	public void turningTheMicrowaveOnIfTheDoorIsClosedTest() throws Exception {
+		microwave.closeTheDoor();
+		microwave.turnOn();
 
-		m.turnOn();
-
-		assertFalse(m.doorOpen);
-		assertTrue(m.on);
+		assertFalse(microwave.doorOpen);
+		assertTrue(microwave.on);
+		assertFalse(microwave.paused);
+		
+		try {
+			microwave.turnOff();
+			microwave.openTheDoor();
+			microwave.turnOn();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	
 	@Test
-	void openingTheDoorIfTheMicrowaveIsOff() {
-		Microwave m = new Microwave();
+	public void openingTheDoorIfTheMicrowaveIsOff() throws Exception {
+		microwave.openTheDoor();
 
-		m.openTheDoor();
+		assertFalse(microwave.on);
+		assertTrue(microwave.doorOpen);
+		
+		try {
+			microwave.closeTheDoor();
+			microwave.turnOn();
+			microwave.openTheDoor();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	@Test
+	public void updatingTimerTest() throws Exception {
+			microwave.setTimer(1, 10);
+			microwave.passASecond();
+			
+			assertEquals(1, microwave.minutes);
+			assertEquals(9, microwave.seconds);
+			
+			microwave.setTimer(1, 0);
+			microwave.passASecond();
+			
+			assertEquals(0, microwave.minutes);
+			assertEquals(59, microwave.seconds);
 
-		assertFalse(m.on);
-		assertTrue(m.doorOpen);
+		try {
+			microwave.reesetTimer();
+			microwave.passASecond();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 	
 }

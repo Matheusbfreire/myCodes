@@ -3,9 +3,17 @@ package microwavesrc;
 public class Microwave {
 	int minutes;
 	int seconds;
-	boolean paused = false;
-	boolean on = false;
-	boolean doorOpen = false;
+	boolean paused;
+	boolean on;
+	boolean doorOpen;
+	
+	public Microwave() {
+		setMinutes(0);
+		setSeconds(0);
+		setPaused(false);
+		setOn(false);
+		setDoorOpen(false);
+	}
 
 	public int getMinutes() {
 		return minutes;
@@ -46,44 +54,79 @@ public class Microwave {
 	public void setDoorOpen(boolean doorOpen) {
 		this.doorOpen = doorOpen;
 	}
-	/* Esse método inicia o timer do microondas de acordo com os minutos
+	/* Método para setar o timer do microondas de acordo com os minutos
 	 * e segundos passados por parâmetro. */
-	public void timer(int minutes, int seconds) {
+	public void setTimer(int minutes, int seconds) {
 		setMinutes(minutes);
 		setSeconds(seconds);
+		printTimePass();
 	}
-	/* Esse método pausa o timer do microondas. */
-	public void pause() {
+	/**
+	 * Método para pausar o timer do microondas.
+	 */
+	public void pauseTimer() {
 		setPaused(true);
 	}
-	/* Esse método reinicia o timer do microondas. */
-	public void reeset() {
+	/**
+	 * Método para reiniciar o timer do microondas.
+	 */
+	public void reesetTimer() {
 		setSeconds(0);
 		setMinutes(0);
 	}
-	/* Esse método desliga o microondas. */
+	/**
+	 * Método para desligar o microondas.
+	 */
 	public void turnOff() {
 		setOn(false);
 	}
-	/* Esse método liga o microondas somente se a porta estiver fechada. */
-	public void turnOn() {
+	/**
+	 * Método para ligar o microondas somente se a porta estiver fechada.
+	 */
+	public void turnOn() throws Exception {
 		if (!this.doorOpen) {
 			setOn(true);
+			setPaused(false);
 		} else {
-			new Exception("ERRO: Porta aberta, impossível ligar o microondas");
+			throw new Exception("ERRO: Porta aberta, impossível ligar o microondas");
 		}
 	}
-	/* Esse método abre a porta do microondas somente se ele estiver desligado. */
-	public void openTheDoor() {
+	/**
+	 * Método para abrir a porta do microondas somente se ele estiver desligado.
+	 */
+	public void openTheDoor() throws Exception {
 		if (!this.on) {
 			setDoorOpen(true);
 		} else {
-			new Exception("ERRO: Microondas ligado, impossível abrir a porta");
+			throw new Exception("ERRO: Microondas ligado, impossível abrir a porta");
 		}
 	}
-	/* Esse método fecha a porta do microondas. */
+	/** 
+	 * Método para fechar a porta do microondas.
+	 */
 	public void closeTheDoor() {
 		setDoorOpen(false);
+	}
+	/** 
+	 * Método para passar 1 segundo.
+	 */
+	public void passASecond() throws Exception {
+		if (this.seconds >= 1) {
+			setSeconds(this.seconds - 1);
+			printTimePass();
+		} else if (this.minutes >= 1) {
+			setMinutes(this.minutes - 1);
+			setSeconds(59);
+			printTimePass();
+		} else {
+			throw new Exception("ERRO: Timer zerado, impossível passar tempo.");
+		}
+	}
+	/** 
+	 * Método para sinalizar a passagem de tempo.
+	 */
+	public void printTimePass() {
+		System.out.println(this.minutes + ":" + this.seconds);
 	}
 	
 }
