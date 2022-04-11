@@ -1,6 +1,6 @@
 package app;
 
-public class Livro {
+abstract class Livro {
 	private static double PCT_DIREITOS = 0.08;
 	protected String titulo;
 	protected Autor autor;
@@ -80,9 +80,7 @@ public class Livro {
 		Livro.posicao = posicao;
 	}
 
-	public double precoVenda() {
-		return (this.precoBase + this.direitosAutorais());
-	}
+	public abstract double precoVenda();
 	
 	public double direitosAutorais() {
 		return (this.precoBase * Livro.PCT_DIREITOS);
@@ -101,9 +99,7 @@ public class Livro {
 		return media;
 	}
 	
-	protected double precoBase() {
-		return this.precoBase;
-	}
+	protected abstract double precoBase();
 	
 	public void novaAvaliacao(int nota) {
 		if (nota >= 1 && nota <= 5) {
