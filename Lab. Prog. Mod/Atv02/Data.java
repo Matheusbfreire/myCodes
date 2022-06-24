@@ -26,7 +26,7 @@ class Data {
     }
 
     public Data(int dia, int mes, int ano) {
-        if (!valida(dia, mes, ano)){
+        if (!valida(dia, mes, ano)) {
             System.out.println("\nERRO: Data inválida!\n");
         } else {
             setDia(dia);
@@ -59,11 +59,11 @@ class Data {
         return this.ano;
     }
 
-    public boolean valida (int dia, int mes, int ano) {
+    public boolean valida(int dia, int mes, int ano) {
         boolean resp = false;
-        
+
         if (mes < 13 && mes > 0) {
-            if (mes == 2) { 
+            if (mes == 2) {
                 if (ano % 4 != 0) {
                     if (dia <= 28 && dia >= 1)
                         resp = true;
@@ -95,7 +95,7 @@ class Data {
         } else {
             resp = false;
         }
-        
+
         return resp;
     }
 
@@ -107,7 +107,7 @@ class Data {
         }
 
         while (!valida(numDias, this.mes, this.ano)) {
-            if (this.mes == 2) { 
+            if (this.mes == 2) {
                 if (this.ano % 4 != 0) {
                     numDias -= 28;
                     this.dia = numDias;
