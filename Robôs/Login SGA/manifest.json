@@ -1,11 +1,11 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "LoginSGA",
     "version": "1.0",
     "content_scripts": [
         {
             "matches": [
-                "https://www.sistemas.pucminas.br/sgaaluno4/SilverStream/Pages/pgAln_LoginSSL.html"
+                "http://www.sistemas.pucminas.br/sgaaluno4/SilverStream/Pages/pgAln_LoginSSL.html"
             ],
             "js": [
                 "index.js"
